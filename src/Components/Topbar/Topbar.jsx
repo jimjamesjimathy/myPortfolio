@@ -23,13 +23,13 @@ export default function Topbar({menuOpen, setMenuOpen}) {
                 <div className='middle'>
                     <div className='links'>
                             <a href='https://github.com/jimjamesjimathy'>
-                                <i class='fab fa-github'></i>
+                                <i className='fab fa-github'></i>
                             </a>
                             <a href='https://www.linkedin.com/in/jimjamesjimathy/'>
-                                <i class='fab fa-linkedin'></i>
+                                <i className='fab fa-linkedin'></i>
                             </a>
                             <a href='https://www.instagram.com/jim.james.jimathy/'>
-                                <i class='fab fa-instagram'></i>
+                                <i className='fab fa-instagram'></i>
                             </a>
                     </div>
                 </div>

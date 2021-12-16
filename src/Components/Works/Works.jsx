@@ -49,13 +49,13 @@ export default function Works() {
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
         {data.map((d) => (
-          <div className='container'>
-            <div className='item'>
-              <div className='left'>
-                <div className='leftContainer'>
+          <div key={d.id} className='container'>
+            <div key={d.id} className='item'>
+              <div key={d.id} className='left'>
+                <div key={d.id} className='leftContainer'>
                   <img src={data.icon} alt='text' />
                   <h2>Title: {d.title}</h2>
-                    <div className='slideDescription'>
+                    <div key={d.id} className='slideDescription'>
                       <h2>Description: </h2>
                     <p>{d.desc}</p>
                     </div>
