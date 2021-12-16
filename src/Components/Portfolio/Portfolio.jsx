@@ -74,7 +74,7 @@ export default function Portfolio() {
                 {
                 data.map(newData => (
                     <div className='item'>
-                        <img src={newData.img} />
+                        <img src={newData.img} alt='text'/>
                         <h3>{newData.title}</h3>
                     </div>))
                 }

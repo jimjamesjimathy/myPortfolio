@@ -53,7 +53,7 @@ export default function Works() {
             <div className='item'>
               <div className='left'>
                 <div className='leftContainer'>
-                  <img src={data.icon} />
+                  <img src={data.icon} alt='text' />
                   <h2>Title: {d.title}</h2>
                     <div className='slideDescription'>
                       <h2>Description: </h2>

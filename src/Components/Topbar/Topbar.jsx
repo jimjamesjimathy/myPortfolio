@@ -22,13 +22,13 @@ export default function Topbar({menuOpen, setMenuOpen}) {
                 {/* Middle section of the top bar  */}
                 <div className='middle'>
                     <div className='links'>
-                            <a href=''>
+                            <a href='https://github.com/jimjamesjimathy'>
                                 <i class='fab fa-github'></i>
                             </a>
-                            <a href=''>
+                            <a href='https://www.linkedin.com/in/jimjamesjimathy/'>
                                 <i class='fab fa-linkedin'></i>
                             </a>
-                            <a href=''>
+                            <a href='https://www.instagram.com/jim.james.jimathy/'>
                                 <i class='fab fa-instagram'></i>
                             </a>
                     </div>
