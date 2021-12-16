@@ -1,0 +1,165 @@
+@import '../../Global.scss';
+
+
+.topbar {
+    position: fixed;
+    top: 0;
+    height: 7vh;
+    width: 100%;
+    background-color: #6475A6;
+    box-shadow: 0px 1px 2px black;
+    z-index: 999;
+
+    // inner wrapper for all Topbar divs 
+    .wrapper {
+        height: 100%;
+        width: inherit;
+        display: flex;
+        align-items: center;
+
+
+        // Left side of Topbar with logo
+        .left {
+           height: 100%;
+           flex: 3; 
+           display: flex;
+           align-items: center;
+
+                .logo {
+                    padding: 3px;
+                    margin-left: 2%;
+                    display: flex;
+                    text-decoration: none;
+                    align-items: center;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    border-radius: 3px;;
+
+                  .JK {
+                      height: 51%;
+                      width: 25%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      border-right: 2.5px solid #905727;
+                      
+                      h4 {  
+                          color: $mainColor;
+                          font-family: 'Schoolbell', sans-serif;
+                          font-size: 2rem;
+                          letter-spacing: .2rem;
+                          text-decoration: none;
+                      }
+                  }
+
+                  .webDev {
+                        height: 100%;
+                        width: 57%;
+                        margin-left: 3%;
+                        display: flex;
+                        align-items: center;
+
+                    h4 {
+                        color: $mainColor;
+                        text-decoration: none;
+                        font-family: 'Schoolbell', sans-serif;
+                        font-size: 1rem;
+                    }
+                  }
+
+                }
+        }
+    
+        // Middle section with icon links 
+        .middle {
+            height: 100%;
+            width: 100%;
+            flex: .5;
+            
+            .links {
+                height: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                
+                i {
+                    padding: 5px;
+                    color: #F0DCCA;
+                    font-size: 2.1rem;
+                }
+            }
+        }
+
+        // Right side of the Topbar; Hamburger menu. 
+        .right {
+            height: 100%;
+            flex: .14;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1%;
+
+            .hamburger {
+                height: 75px;
+                width: 57px;
+                padding: 5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                cursor: pointer;
+
+                span {
+                    background-color: $mainColor;
+                    border: 3px solid $mainColor;
+                    border-radius: 5px;
+                    transform-origin: right;
+                    transition: all 1s ease;
+                }
+            }
+        }
+    }
+
+    &.active {
+        background-color: $mainColor;
+
+
+        .left {
+            .logo {
+                .JK {
+                    border-color: #EDD4BF;
+                    h4 {
+                        color: #C07335;
+                    }
+                }
+                .webDev {
+                    h4 {
+                        color: #6F9283;
+                    }
+                }
+            }
+        }
+
+        .middle {
+            .links {
+                i {
+                    color: #6F9283;
+                }
+            }
+        }
+
+        .hamburger {
+            span {
+                &:first-child {
+                    border-color: #EDD4BF;
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child {
+                    border-color: #EDD4BF;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}

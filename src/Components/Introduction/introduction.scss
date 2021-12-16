@@ -1,0 +1,180 @@
+@import '../../Global.scss';
+
+.introduction {
+    height: 100%;
+    width: 100%;
+
+    .intro-content {
+            height: inherit;
+            width: inherit;
+            flex: 1;
+
+        .wrapper {
+            height: inherit;
+            width: inherit;
+            background-image: linear-gradient(to top right, #1E2334, #2D344E, #3C4568);
+
+            .wrapper-text {
+                position: absolute;
+                height: 35%;
+                bottom: 25%;
+                right: 18.5%;
+                padding: 0 2%;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                z-index: 3;
+                animation: fadeIn 3s;
+
+                .titleTop {
+                    h1 {
+                        font-weight: 400;
+                        font-size: 10rem;
+                        color: #fff;
+                        
+                        .james {
+                            font-weight: 400;
+                            font-size: 10rem;
+                            color: $mainColor;
+                        }
+                    }
+
+                    h4 {
+                        font-weight: 500;
+                        color: #fff;
+                        font-size: 2.3rem;
+                    }
+            }
+
+            .titleBottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+
+                .spacer {
+                    width: 35%;
+                }
+
+                h3 {
+                    font-size: 2rem;
+                    color: $mainColor;
+                }
+                span {
+                    color: #AF2B1D;
+                }
+            }
+
+                .ityped-cursor {
+                    animation: blink 1s infinite;
+                }
+
+                @keyframes blink {
+                    50% {
+                        opacity: 1;
+                        color: #000;
+                    }
+                    100%{
+                        opacity: 0;
+                        color: #000;
+                    }
+                }
+            }
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            .circle {
+                position: absolute;
+                height: 85%;
+                width: 43%;
+                left: 7%;
+                top:7.5%;
+                border-radius: 50%;
+                background-color: #48845E ;
+                animation: slideDown 2s;
+                z-index: 2;
+            }
+            @keyframes slideDown {
+                0% {
+                    top: -70%;
+                    opacity: 0;
+                }
+                100% {
+                    top: 7.5%;
+                    opacity: 1;
+                }
+            }
+
+            .square {
+                position: absolute;
+                height: 90%;
+                width: 45%;
+                top: 5%;
+                right: 15%;
+                background-color: #C97B40;
+                animation: tumble 3s;
+                transition: all 2s ease;
+            }
+            @keyframes tumble {
+                0% {
+                    right: -55%;
+                    transform: rotateZ(100deg);
+                }
+                100% {
+                    right: 15%;
+                }
+            }
+    
+            .rectangle {
+                position: absolute;
+                height: 15%;
+                width: 20%;
+                bottom: 10%;
+                left: 57%;
+                border-radius: 3px;
+                text-decoration: none;
+                background-color: #AF2B1D;
+                animation: slideIn 3s;
+                transition: all 3s ease-out;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 550ms ease;
+
+                h4 {
+                    font-size: 2rem;
+                    color: #fff;
+                    font-weight: 500;
+                    transition: all 750ms ease;
+                }
+                &:hover {
+                    background-color: #48845E;
+
+                    h4 {
+                        color: $mainColor;
+                    }
+                }
+            }
+
+            @keyframes slideIn {
+                0% {
+                    left: -20%;
+                    opacity: 0;
+                }
+                50% {
+                    left: 77%;
+                }
+                100% {
+                    left: 57%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
