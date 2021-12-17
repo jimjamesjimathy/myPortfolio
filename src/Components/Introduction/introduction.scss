@@ -1,8 +1,51 @@
 @import '../../Global.scss';
 
+$xlr: 2000px;
+
+@mixin desktopLarge {
+    @media (max-width: #{$xlr}) {
+        @content
+    }
+}
+
+$lrg: 1700px;
+
+@mixin desktop {
+    @media (max-width: #{$lrg}) {
+        @content
+    }
+}
+
+$laptopWidth: 1482px;
+
+@mixin laptop {
+    @media (max-width: #{$laptopWidth}) {
+        @content
+    }
+}
+
+$laptopWidthSm: 1100px;
+
+@mixin laptopSm {
+    @media (max-width: #{$laptopWidthSm}) {
+        @content
+    }
+}
+
+
+$tabletWidth: 959px;
+
+@mixin tablet {
+    @media (max-width: #{$tabletWidth}) {
+        @content
+    }
+}
+
+
+
 .introduction {
     height: 100%;
-    width: 100%;
+    max-width: 2400px;
 
     .intro-content {
             height: inherit;
@@ -17,7 +60,7 @@
             .wrapper-text {
                 position: absolute;
                 height: 35%;
-                bottom: 25%;
+                bottom: 23%;
                 right: 18.5%;
                 padding: 0 2%;
                 border-radius: 25px;
@@ -26,16 +69,65 @@
                 z-index: 3;
                 animation: fadeIn 3s;
 
+                @include desktopLarge {
+                    right: 16%;
+                }
+                @include desktop {
+                    right: 19%;
+                }
+                @include laptop {
+                    right: 16%;
+                }
+                @include laptopSm {
+                    right: 20%;
+                }
+                @include tablet {
+                    right: 15%;
+                }
+
+
                 .titleTop {
                     h1 {
                         font-weight: 400;
                         font-size: 10rem;
                         color: #fff;
+
+                        @include desktopLarge {
+                            font-size: 9rem;
+                        }
+                        @include desktop {
+                            font-size: 7rem;
+                        }
+                        @include laptop {
+                            font-size: 6.66rem;
+                        }
+                        @include laptopSm {
+                            font-size: 5rem;
+                        }
+                        @include tablet {
+                            font-size: 4.5rem;
+                        }
                         
                         .james {
                             font-weight: 400;
                             font-size: 10rem;
                             color: $mainColor;
+
+                            @include desktopLarge {
+                                font-size: 9rem;
+                            }
+                            @include desktop {
+                                font-size: 7rem;
+                            }
+                            @include laptop {
+                                font-size: 6.66rem;
+                            }
+                            @include laptopSm {
+                                font-size: 5rem;
+                            }
+                            @include tablet {
+                                font-size: 4.5rem;
+                            }
                         }
                     }
 
@@ -43,7 +135,15 @@
                         font-weight: 500;
                         color: #fff;
                         font-size: 2.3rem;
+
+                        @include desktop {
+                            font-size: 2rem;
+                        }
+                        @include tablet {
+                            font-size: 1.5rem;
+                        }
                     }
+
             }
 
             .titleBottom {
@@ -58,6 +158,13 @@
                 h3 {
                     font-size: 2rem;
                     color: $mainColor;
+
+                    @include desktop {
+                        font-size: 1.75rem;
+                    }
+                    @include tablet {
+                        font-size: 1.35rem;
+                    }
                 }
                 span {
                     color: #AF2B1D;
@@ -98,6 +205,28 @@
                 background-color: #48845E ;
                 animation: slideDown 2s;
                 z-index: 2;
+
+                @include desktopLarge {
+                    height: 80%;
+                    top: 10%;
+                }
+                @include desktop {
+                    height: 80%;
+                    top: 10%;   
+                }
+                @include laptop {
+                    height: 75%;
+                    top: 17.5%;
+                }
+                @include laptopSm {
+                    height: 70%;
+                    width: 50%;
+                    top: 10%;
+                }
+                @include tablet {
+                    height: 50%;
+                    top: 25%;
+                }
             }
             @keyframes slideDown {
                 0% {
@@ -119,6 +248,30 @@
                 background-color: #C97B40;
                 animation: tumble 3s;
                 transition: all 2s ease;
+
+                @include desktopLarge {
+                    height: 80%;
+                    top: 10%;
+                }
+
+                @include desktop {
+                    height: 85%;
+                    width: 50%;
+                    top: 7.5%;
+                }
+                @include laptop {
+                    height: 75%;
+                    width: 45%;
+                    top:17.5%;
+                }
+                @include laptopSm {
+                    height: 70%;
+                    width: 50%;
+                }
+                @include tablet {
+                    height: 50%;
+                    top: 25%;
+                }
             }
             @keyframes tumble {
                 0% {
@@ -147,11 +300,35 @@
                 justify-content: center;
                 transition: all 550ms ease;
 
+                @include desktopLarge {
+                    height: 7%;
+                    bottom: 15%;
+                }
+
+                @include desktop {
+                    height: 7%;
+                    bottom: 15%;
+                }
+                @include laptop {
+                    height: 7%;
+                    bottom: 17%;
+                }
+
                 h4 {
                     font-size: 2rem;
                     color: #fff;
                     font-weight: 500;
                     transition: all 750ms ease;
+
+                    @include desktopLarge {
+                        font-size: 1.8rem;
+                    }
+                    @include desktop {
+                        font-size: 1.75rem;
+                    }
+                    @include laptop {
+                        font-size: 1.5rem;
+                    }
                 }
                 &:hover {
                     background-color: #48845E;
@@ -178,3 +355,4 @@
         }
     }
 }
+

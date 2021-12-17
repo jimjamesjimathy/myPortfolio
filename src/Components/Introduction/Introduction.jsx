@@ -24,7 +24,7 @@ export default function Introduction() {
                     <div className='wrapper-text'>
                         <div className='titleTop'>
                             <h4>My name is:</h4>
-                            <h1><span className='james'>JAMES</span> Kirkwood</h1>
+                            <h1><span className='james'>James</span> Kirkwood</h1>
                         </div>
                         <div className='titleBottom'>
                             <div className='spacer'></div>

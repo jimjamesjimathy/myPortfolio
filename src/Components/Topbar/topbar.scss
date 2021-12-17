@@ -1,6 +1,14 @@
 @import '../../Global.scss';
 
 
+$tabletWidth: 959px;
+
+@mixin tablet {
+    @media (max-width: #{$tabletWidth}) {
+        @content
+    }
+}
+
 .topbar {
     position: fixed;
     top: 0;
@@ -9,6 +17,7 @@
     background-color: #6475A6;
     box-shadow: 0px 1px 2px black;
     z-index: 999;
+    max-width: 2400px;
 
     // inner wrapper for all Topbar divs 
     .wrapper {
@@ -74,6 +83,9 @@
             height: 100%;
             width: 100%;
             flex: .5;
+            @include tablet {
+                display: none;
+            }
             
             .links {
                 height: inherit;
@@ -97,6 +109,10 @@
             align-items: center;
             justify-content: center;
             margin-right: 1%;
+            
+            @include tablet {
+                flex: .25;
+            }
 
             .hamburger {
                 height: 75px;
