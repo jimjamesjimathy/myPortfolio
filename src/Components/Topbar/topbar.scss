@@ -17,11 +17,10 @@ $tabletWidth: 959px;
     background-color: #6475A6;
     box-shadow: 0px 1px 2px black;
     z-index: 999;
-    max-width: 2400px;
 
     // inner wrapper for all Topbar divs 
     .wrapper {
-        height: 100%;
+        height: inherit;
         width: inherit;
         display: flex;
         align-items: center;
@@ -29,53 +28,20 @@ $tabletWidth: 959px;
 
         // Left side of Topbar with logo
         .left {
-           height: 100%;
-           flex: 3; 
-           display: flex;
-           align-items: center;
+           height: inherit;
+           flex: 3;
+           display: flex; 
 
-                .logo {
-                    padding: 3px;
-                    margin-left: 2%;
-                    display: flex;
-                    text-decoration: none;
-                    align-items: center;
-                    background-color: rgba(255, 255, 255, 0.2);
-                    border-radius: 3px;;
+           a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
 
-                  .JK {
-                      height: 51%;
-                      width: 25%;
-                      display: flex;
-                      align-items: center;
-                      justify-content: center;
-                      border-right: 2.5px solid #905727;
-                      
-                      h4 {  
-                          color: $mainColor;
-                          font-family: 'Schoolbell', sans-serif;
-                          font-size: 2rem;
-                          letter-spacing: .2rem;
-                          text-decoration: none;
-                      }
-                  }
-
-                  .webDev {
-                        height: 100%;
-                        width: 57%;
-                        margin-left: 3%;
-                        display: flex;
-                        align-items: center;
-
-                    h4 {
-                        color: $mainColor;
-                        text-decoration: none;
-                        font-family: 'Schoolbell', sans-serif;
-                        font-size: 1rem;
-                    }
-                  }
-
-                }
+            img {
+                height: 75%;
+                padding-left: 10px;
+            }
+           }
         }
     
         // Middle section with icon links 

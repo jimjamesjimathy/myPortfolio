@@ -2,7 +2,6 @@ import Topbar from './Components/Topbar/Topbar';
 import Menu from './Components/Menu/Menu';
 import Introduction from './Components/Introduction/Introduction';
 import Portfolio from './Components/Portfolio/Portfolio';
-import Works from './Components/Works/Works';
 import Reviews from './Components/Reviews/Reviews';
 import Contact from './Components/Contact/Contact';
 import { useState } from 'react';
@@ -19,7 +18,6 @@ function App() {
       <div className="sections">
         <Introduction />
         <Portfolio />
-        <Works />
         <Reviews />
         <Contact />
       </div>

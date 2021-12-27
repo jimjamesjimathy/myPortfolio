@@ -1,15 +1,15 @@
 @import '../../Global.scss';
 
 .portfolioList {
-    height: 25%;
-    width: 5%;
-    padding: 1%;
-    font-weight: 500;
+    height: 3vh;
+    width: 5vw;
+    font-weight: 400;
     cursor: pointer;
     background-color: #6475A6;
+    box-shadow: none;
 
     &.active {
-        font-weight: 700;
+        font-weight: 600;
         color: #fff;
         background-color: #48845E;
     }
